@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StackOps Token Interface</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquidity Pool Interface</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>StackOps Token Interface</h1>
-    <div>
-      <label for="total-supply">Total Supply:</label>
-      <button id="get-total-supply">Get Total Supply</button>
-      <div class="result" id="total-supply-result"></div>
+    <div class="container">
+        <h1>Liquidity Pool Interface</h1>
+        
+        <button id="initialize-pool">Initialize Pool</button>
+        <div class="result" id="initialize-result"></div>
+        
+        <h2>Add Liquidity</h2>
+        <label for="stx-amount">STX Amount:</label>
+        <input type="number" id="stx-amount">
+        <label for="roo-amount">ROO Amount:</label>
+        <input type="number" id="roo-amount">
+        <label for="welsh-amount">Welsh Amount:</label>
+        <input type="number" id="welsh-amount">
+        <label for="charisma-amount">Charisma Amount:</label>
+        <input type="number" id="charisma-amount">
+        <label for="velar-amount">Velar Amount:</label>
+        <input type="number" id="velar-amount">
+        <label for="ausdc-amount">AUSDC Amount:</label>
+        <input type="number" id="ausdc-amount">
+        <button id="add-liquidity">Add Liquidity</button>
+        <div class="result" id="add-liquidity-result"></div>
+
+        <button id="remove-liquidity">Remove Liquidity</button>
+        <div class="result" id="remove-liquidity-result"></div>
+
+        <h2>Swap Tokens</h2>
+        <label for="from-token">From Token ID:</label>
+        <input type="number" id="from-token">
+        <label for="to-token">To Token ID:</label>
+        <input type="number" id="to-token">
+        <label for="swap-amount">Amount:</label>
+        <input type="number" id="swap-amount">
+        <button id="swap">Swap</button>
+        <div class="result" id="swap-result"></div>
     </div>
-    <div>
-      <label for="initialize">Initialize Contract:</label>
-      <button id="initialize">Initialize</button>
-      <div class="result" id="initialize-result"></div>
-    </div>
-    <div>
-      <label for="recipient">Transfer Tokens:</label>
-      <input type="text" id="recipient" placeholder="Recipient Address">
-      <input type="number" id="amount" placeholder="Amount">
-      <button id="transfer">Transfer</button>
-      <div class="result" id="transfer-result"></div>
-    </div>
-    <div>
-      <label for="account">Get Balance:</label>
-      <input type="text" id="account" placeholder="Account Address">
-      <button id="get-balance">Get Balance</button>
-      <div class="result" id="balance-result"></div>
-    </div>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
